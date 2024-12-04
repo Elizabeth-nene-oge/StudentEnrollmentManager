@@ -9,7 +9,7 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 
 
-DATABASE_URL = "os.getenv('POSTGRES_URL)"
+DATABASE_URL = os.getenv("POSTGRES_URL")
 
 engine = create_engine(DATABASE_URL)
 sessionLocal = sessionmaker(bind=engine)
